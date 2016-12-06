@@ -5,7 +5,7 @@ using System.Collections;
 /// <summary>
 /// Base Node class. All nodes inherit from ANode
 /// </summary>
-public abstract class ANode<T> {
+public abstract class ANode<T> : ScriptableObject, INode {
 
     // What happens when this event is triggered
     protected UnityEvent<T> Trigger;
@@ -48,4 +48,6 @@ public abstract class ANode<T> {
     {
         Trigger.Invoke(arg);
     }
+
+    public abstract void TriggerNode();
 }
