@@ -29,11 +29,11 @@ public class SimpleDialogTest : MonoBehaviour {
         // set it up
         dialogNode.AcceptTrigger(OnTrigger);
 
-        Debug.Log("Starting SimpleDialogTest 1...");
+        Debug.Log(DebugHelper.FormatText("Starting SimpleDialogTest 1...", "yellow"));
 
         dialogNode.TriggerNode();
 
-        Debug.Log("SimpleDialogTest 1 finished!");
+        Debug.Log(DebugHelper.FormatText("SimpleDialogTest 1 finished!", "green"));
     }
 
     void Test2()
@@ -84,7 +84,7 @@ public class SimpleDialogTest : MonoBehaviour {
         dialogueNode2.AcceptTrigger(OnTrigger);
         dialogueNode3.AcceptTrigger(OnTrigger);
 
-        Debug.Log("Starting SimpleDialogTest 2...");
+        Debug.Log(DebugHelper.FormatText("Starting SimpleDialogTest 2...", "yellow"));
 
         dialogueNode1.TriggerNode();
 
@@ -100,7 +100,7 @@ public class SimpleDialogTest : MonoBehaviour {
         textNode3.TriggerNode();
         Debug.Log("textNode3 finished!");
 
-        Debug.Log("SimpleDialogTest 2 finished!");
+        Debug.Log(DebugHelper.FormatText("SimpleDialogTest 2 finished!", "green"));
     }
 
     void OnTrigger(DialogNodeEvent e)
